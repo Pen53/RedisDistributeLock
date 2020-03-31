@@ -1,0 +1,44 @@
+#========================================server config=====================================
+server:
+  port: 9100
+  servlet:
+    context-path: /redisDistributeLock
+#========================================spring config=====================================
+spring:
+  application:
+    name: springcloud-product
+  devtools:
+    restart:
+      enabled: false
+  #========================================MySQL config=====================================
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/fescardb?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/seata?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+    #url: jdbc:mysql://localhost:3306/seata-account-db?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+    #url: jdbc:mysql://10.14.8.232:3306/baojun_app?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: andy123L
+    #password: Sgmw@5050
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password:
+    database: 0
+    timeout: 2000
+#========================================mybatis config=====================================
+mybatis:
+  type-aliases-package: com.mepeng.cn.domain
+  mapper-locations: classpath:mapper/*.xml
+ribbon:
+  ReadTimeout: 30000 #处理超时时间 默认5秒  120000
+  ConnectTimeout: 30000 #连接超时时间 默认2秒   120000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
