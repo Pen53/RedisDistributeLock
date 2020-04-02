@@ -26,4 +26,19 @@ public class ProductController {
             return "库存不足";
         }
     }
+
+    /**
+     * 秒杀商品测试
+     * @return
+     */
+    @ResponseBody
+    @GetMapping("seckillTest2")
+    public String seckillProductTest2() {
+        Boolean flag = productService.seckillProductOther(1L, 1);
+        if(flag ==true){
+            return "创建订单成功";
+        } else{
+            return "库存不足";
+        }
+    }
 }

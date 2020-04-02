@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 @Configuration
 public class RedissonConfig {
-    @Bean(destroyMethod = "shutdown")
+    @Bean(name="redissonClient",destroyMethod = "shutdown")
     public RedissonClient redisson() throws IOException {
         // 1. 创建Config对象，读取配置属性
         // 2. 创建Redisson对象,传入Config对象
