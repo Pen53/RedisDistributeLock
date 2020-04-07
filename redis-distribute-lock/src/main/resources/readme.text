@@ -1,0 +1,9 @@
+http://127.0.0.1:9100/redisDistributeLock/product/seckillTest
+
+D:\redisN1\Redis-x64-3.2.100
+redis-server redis.windows-service.conf
+
+https://github.com/Pen53/RedisDistributeLock.git
+
+pub key:csl528528
+pri key:loen53

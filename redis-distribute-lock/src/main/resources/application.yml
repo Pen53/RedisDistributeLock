@@ -3,6 +3,11 @@ server:
   port: 9100
   servlet:
     context-path: /redisDistributeLock
+#  ssl:
+#    key-store: classpath:truststore.jks
+#    key-password: csl528528
+#    key-store-type: JKS
+    #增加ssl证书
 #========================================spring config=====================================
 spring:
   application:
