@@ -1,3 +1,5 @@
 /.idea/
 /springcloud-eureka/target/
 /redis-distribute-lock/target/
+/server-config/target/
+/springcloud-config-client/target/
