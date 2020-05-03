@@ -36,7 +36,7 @@ public class ConsumerAspect {
 
             try {
                 object = this.messageConverter.fromMessage(message);
-                LOGGER.info("ConsumerAspect aroundAdvice msg data:{},message:{}" , object,message);
+                LOGGER.info("ConsumerAspect aroundAdvice msg msgKey:{},message:{}" , msgKey,object);
                 exist = this.dbStoreConsumerMsg.exist(msgKey);
             } catch (MessageConversionException var19) {
                 LOGGER.error("异常转换 ConsumerAspect MessageConversionException1:", var19);
