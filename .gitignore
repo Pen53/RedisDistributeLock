@@ -3,3 +3,5 @@
 /redis-distribute-lock/target/
 /server-config/target/
 /springcloud-config-client/target/
+/pen.common/target/
+/pen.Order/target/
